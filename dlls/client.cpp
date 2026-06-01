@@ -732,6 +732,8 @@ void ServerActivate(edict_t* pEdictList, int edictCount, int clientMax)
 			ALERT(at_console, "Can't instance %s\n", STRING(pEdictList[i].v.classname));
 		}
 	}
+	
+	SERVER_COMMAND( "sv_maxspeed 190\n" );
 
 	// Link user messages here to make sure first client can get them...
 	LinkUserMessages();
