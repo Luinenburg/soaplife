@@ -20,7 +20,7 @@
 #pragma once
 
 constexpr int MAX_PLAYERS = 32;
-#define MAX_WEAPONS 64 // ???
+#define MAX_WEAPONS 64 // ??? SOAPY ADDITION: What is so confusing about this? The name is self-explanatory
 
 #define MAX_WEAPON_SLOTS 5 // hud item selection slots
 #define MAX_ITEM_TYPES 6   // hud item selection slots

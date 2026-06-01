@@ -1121,7 +1121,7 @@ void PM_WalkMove()
 
 	// Copy movement amounts
 	fmove = pmove->cmd.forwardmove;
-	smove = pmove->cmd.sidemove;
+	// smove = pmove->cmd.sidemove;
 
 	// Zero out z components of movement vectors
 	pmove->forward[2] = 0;
