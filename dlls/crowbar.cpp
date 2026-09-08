@@ -190,7 +190,7 @@ bool CCrowbar::Swing(bool fFirst)
 		if (fFirst)
 		{
 			// miss
-			m_flNextPrimaryAttack = GetNextAttackDelay(0.5);
+			m_flNextPrimaryAttack = GetNextAttackDelay(1.5);
 
 			// player "shoot" animation
 			m_pPlayer->SetAnimation(PLAYER_ATTACK1);
@@ -238,7 +238,7 @@ bool CCrowbar::Swing(bool fFirst)
 
 #endif
 
-		m_flNextPrimaryAttack = GetNextAttackDelay(0.25);
+		m_flNextPrimaryAttack = GetNextAttackDelay(1);
 
 #ifndef CLIENT_DLL
 		// play thwack, smack, or dong sound
