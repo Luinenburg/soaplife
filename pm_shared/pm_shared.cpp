@@ -1121,7 +1121,8 @@ void PM_WalkMove()
 
 	// Copy movement amounts
 	fmove = pmove->cmd.forwardmove;
-	smove = pmove->cmd.sidemove;
+	// smove = pmove->cmd.sidemove;
+	smove = 0;
 
 	// Zero out z components of movement vectors
 	pmove->forward[2] = 0;
@@ -1400,7 +1401,7 @@ void PM_WaterMove()
 	// user intentions
 	//
 	for (i = 0; i < 3; i++)
-		wishvel[i] = pmove->forward[i] * pmove->cmd.forwardmove + pmove->right[i] * pmove->cmd.sidemove;
+		wishvel[i] = pmove->forward[i] * pmove->cmd.forwardmove/* + pmove->right[i] * pmove->cmd.sidemove*/;
 
 	// Sinking after no other movement occurs
 	if (0 == pmove->cmd.forwardmove && 0 == pmove->cmd.sidemove && 0 == pmove->cmd.upmove)
@@ -1489,8 +1490,10 @@ void PM_AirMove()
 	float wishspeed;
 
 	// Copy movement amounts
-	fmove = pmove->cmd.forwardmove;
-	smove = pmove->cmd.sidemove;
+	//fmove = pmove->cmd.forwardmove;
+	fmove = 0;
+	//smove = pmove->cmd.sidemove;
+	smove = 0;
 
 	// Zero out z components of movement vectors
 	pmove->forward[2] = 0;
@@ -2563,6 +2566,7 @@ PM_Jump
 void PM_Jump()
 {
 	int i;
+	return;
 
 	if (0 != pmove->dead)
 	{
